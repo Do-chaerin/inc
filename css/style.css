@@ -24,7 +24,11 @@ a {
   text-decoration: none;
   color: #333;
 }
-
+.container {
+  position: relative;
+  max-width: 1200px;
+  margin: auto;
+}
 .menu_left {
   width: 50%;
 }
@@ -203,7 +207,7 @@ footer {
 .ft_menu li span {
   width: calc(100% / 2) px;
   color: #fff;
-  background-color: rgb(4, 17, 29);
+  background-color: #4e4e4e;
 }
 .ft_info {
   color: #909090;
@@ -218,33 +222,27 @@ footer {
 footer .ft_fam {
   position: absolute;
   right: 0;
-  top: 191%;
+  top: ;
   padding: 30px;
   color: #fff;
 }
 .ft_icon {
   position: absolute;
   right: 0;
-  top: 198%;
+  bottom: 0;
   padding: 30px;
 }
-/* 반응형 */
-@media screen and (max-width: 672px) {
-  section .manu_left {
+
+
+@media (max-width: 768px) {
+  .menu_left, .menu_right {
     display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 50px;
+    right: 20px;
+    background-color: #333;
+    padding: 10px;
+    border-radius: 5px;
   }
-  .mb-xi {
-    display: block;
-  }
-  .user {
-    gap: 10px;
-  }
-}
-@media screen and (max-width: 390px) {
-  .header {
-    padding: 0 20px;
-  }
-  .user {
-    gap: 0px;
-  }
-}
+
