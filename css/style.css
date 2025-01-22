@@ -107,6 +107,7 @@ span {
 .bs_title {
   font-weight: bold;
   font-size: 50px;
+  padding: 30px;
 }
 
 .bs1 li {
@@ -167,7 +168,7 @@ span {
   border-bottom: 2px solid #000;
 }
 .contact_bt li {
-  padding: 30px;
+  padding: 50px;
 }
 
 .contact_main {
@@ -215,7 +216,7 @@ footer {
   display: flex;
   flex-direction: column;
   align-items: flex-end; /* 오른쪽 정렬 */
-  justify-content: space-around
+  justify-content: space-around;
 }
 
 .ft_right .ft_fam ul {
@@ -228,7 +229,6 @@ footer {
 
 .ft_right .ft_icon img {
   margin-left: 10px; /* 아이콘 간 간격 */
-
 }
 
 /*반응형*/
@@ -243,5 +243,27 @@ footer {
     background-color: #333;
     padding: 10px;
     border-radius: 5px;
+  }
+}
+@media (max-width: 480px) {
+  header {
+    padding: 10px;
+  }
+
+  header ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .main_text .main_title {
+    font-size: 1.2rem;
+  }
+
+  .main_text p {
+    font-size: 0.9rem;
+  }
+
+  footer ul li {
+    font-size: 0.8rem;
   }
 }
