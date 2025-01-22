@@ -240,7 +240,6 @@ footer {
   .menu_left,
   .menu_right {
     display: none;
-    flex-direction: column;
     position: static;
     top: 50px;
     right: 20px;
@@ -248,47 +247,163 @@ footer {
     padding: 10px;
     border-radius: 5px;
   }
+  .bs1 p {
+    padding-top: 0;
+  }
 }
-@media (max-width: 390px) {
+@media (max-width: 768px) {
   header {
-    padding: 10px;
-  }
-
-  header ul {
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
     flex-direction: column;
-    gap: 10px;
+    align-content: space-around;
+    text-align: center;
+  }
+}
+
+@media (max-width: 390px) {
+  .menu_left,
+  .menu_right {
+    justify-content: center;
+    margin-top: 10px;
   }
 
-  .main_text .main_title {
-    font-size: 15px;
+  .menu_left li,
+  .menu_right li {
+    margin: 0 10px;
   }
 
-  .main_text p {
-    font-size: 13px;
+  .main_title {
+    font-size: 24px;
   }
 
-  footer ul li {
-    font-size: 13px;
+  .main_text .txt1,
+  .main_text .txt2,
+  .main_text .txt3 {
+    font-size: 16px;
   }
-  footer {
-    flex-direction: column; /* 위아래로 정렬 */
+
+  .bs1 li:last-child {
+    padding-bottom: 30px;
+  }
+  .bs1 p {
+    padding-bottom: 0px;
+  }
+  .news ul {
+    flex-direction: column;
     align-items: center;
   }
 
-  footer section {
-    flex: none; /* 고정된 높이로 */
-    width: 100%; /* 전체 너비를 차지 */
+  .news ul li {
+    width: auto;
+    text-align: center;
+  }
+
+  .contact_main ul li {
+    font-size: 14px;
+  }
+
+  footer {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .ft_left,
+  .ft_right {
+    align-items: center;
+    margin-bottom: 20px;
+    font-size: 10px;
+  }
+}
+
+/* 미디어 쿼리: 390px 이하 */
+@media (max-width: 390px) {
+  .main_title {
+    font-size: 20px;
+  }
+  .main_text .txt1,
+  .main_text .txt2,
+  .main_text .txt3 {
+    font-size: 14px;
+  }
+  .bs_title {
+    font-size: 20px;
+  }
+
+  .main_business .bs1 li p {
+    font-size: 14px;
+  }
+
+  .news ul li {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+
+  .contact_main ul li {
+    font-size: 12px;
+  }
+
+  .menu_left li,
+  .menu_right li {
+    margin: 0 5px;
+    font-size: 12px;
+  }
+
+  footer {
+    padding: 10px 5px;
+  }
+  footer .ft_menu {
+    font-size: 12px;
+  }
+
+  .ft_left ul,
+  .ft_right ul {
     text-align: left;
   }
 
-  .ft_menu {
-  font-size: 10px;
+  .ft_icon img {
+    width: 20px;
+    height: 20px;
+    margin: 0 5px;
   }
-  .ft_right .ft_fam ul li select {
-    width: 100%; /* 선택 박스 너비 조정 */
+}
+/* 작은 화면 (768px 이하) */
+@media (max-width: 768px) {
+  .news ul li {
+    flex-direction: column;   /* 세로로 쌓이도록 변경 */
+    align-items: center;      /* 이미지와 텍스트 중앙 정렬 */
   }
 
-  .ft_right .ft_icon img {
-    margin: 0 5px; /* 아이콘 간격 조정 */
+  .news ul li img {
+    width: 100%;              /* 작은 화면에서는 이미지 크기 줄이기 */
+    height: 100%;             /* 작은 화면에서는 이미지 크기 줄이기 */
+    margin-right: 0;          /* 이미지와 텍스트 간의 간격 제거 */
+    margin-bottom: 10px;      /* 이미지와 텍스트 사이에 간격 추가 */
+  }
+
+  .news ul li span {
+    font-size: 14px;          /* 텍스트 크기 줄이기 */
+    max-width: 250px;         /* 텍스트 길이 제한 */
+  }
+}
+
+/* 매우 작은 화면 (390px 이하) */
+@media (max-width: 390px) {
+  .news ul li {
+    flex-direction: column;   /* 세로로 쌓이도록 변경 */
+    align-items: center;      /* 이미지와 텍스트 중앙 정렬 */
+  }
+
+  .news ul li img {
+    width: 100%;              /* 매우 작은 화면에서 이미지 크기 추가 축소 */
+    height: 100%;             /* 매우 작은 화면에서 이미지 크기 추가 축소 */
+    margin-right: 0;          /* 이미지와 텍스트 간의 간격 제거 */
+    margin-bottom: 8px;       /* 이미지와 텍스트 사이에 간격 추가 */
+  }
+
+  .news ul li span {
+    font-size: 12px;          /* 텍스트 크기 추가 축소 */
+    max-width: 200px;         /* 텍스트 길이 제한 */
   }
 }
