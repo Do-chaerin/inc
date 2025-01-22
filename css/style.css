@@ -37,7 +37,6 @@ a {
   width: 100%;
   display: flex;
   text-align: center;
-  background-color: antiquewhite;
 }
 
 .menu_left ul li {
@@ -52,7 +51,6 @@ a {
   width: 100%;
   display: flex;
   text-align: center;
-  background-color: aqua;
   display: flex;
 }
 .menu_right ul li {
@@ -102,30 +100,24 @@ span {
 }
 /*비즈니스*/
 .main_business {
-  display: block;
   width: 100%;
-  height: 650px;
+  height: 100%;
   background-color: #cccccc;
 }
 .bs_title {
   font-weight: bold;
   font-size: 50px;
-  padding: 30px;
-}
-
-.bs1 {
-  float: left;
 }
 
 .bs1 li {
-  padding: 30px;
   font-size: 20px;
 }
 
 .bs1 p {
   width: 300px;
-  position: relative;
-  float: left;
+  height: 100%;
+  display: inline-block;
+  padding: 10px;
   padding: 30px;
 }
 
@@ -185,64 +177,71 @@ span {
 /*하단*/
 
 footer {
-  width: 100%;
-  height: 300px;
+  display: flex;
+  justify-content: space-between; /* 왼쪽과 오른쪽으로 분리 */
+  padding: 20px;
   background-color: #4e4e4e;
+  font-family: Arial, sans-serif;
 }
 
 .ft_left {
-  display: flex;
+  max-width: 70%; /* 왼쪽 섹션의 너비 조정 */
 }
 
-.ft_logo {
-  padding: 30px;
-  color: #fff;
-  font-weight: bold;
+.ft_left ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 10px 0;
+  color: #b0b0b0;
+}
+
+.ft_left .ft_logo li {
   font-size: 20px;
-}
-.ft_menu {
-  padding: 30px;
+  font-weight: bold;
+  color: #fff;
 }
 
-.ft_menu li span {
-  width: calc(100% / 2) px;
-  color: #fff;
-  background-color: #4e4e4e;
+.ft_left .ft_menu li {
+  font-size: 15px;
+  color: #ffffff;
 }
-.ft_info {
-  color: #909090;
-  padding: 30px;
+
+.ft_left .ft_menu li span {
+  margin-right: 15px; /* 메뉴 간 간격 */
+  color: #ffffff;
 }
 
 .ft_right {
-  width: 20%;
   display: flex;
+  flex-direction: column;
+  align-items: flex-end; /* 오른쪽 정렬 */
+  justify-content: space-around
 }
 
-footer .ft_fam {
-  position: absolute;
-  right: 0;
-  top: ;
-  padding: 30px;
-  color: #fff;
-}
-.ft_icon {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  padding: 30px;
+.ft_right .ft_fam ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 10px 0;
+  color: #ffffff;
+  border-bottom: 2px solid #ffffff;
 }
 
+.ft_right .ft_icon img {
+  margin-left: 10px; /* 아이콘 간 간격 */
 
+}
+
+/*반응형*/
 @media (max-width: 768px) {
-  .menu_left, .menu_right {
+  .menu_left,
+  .menu_right {
     display: none;
     flex-direction: column;
-    position: absolute;
+    position: static;
     top: 50px;
     right: 20px;
     background-color: #333;
     padding: 10px;
     border-radius: 5px;
   }
-
+}
