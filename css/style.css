@@ -118,7 +118,6 @@ span {
   width: 300px;
   height: 100%;
   display: inline-block;
-  padding: 10px;
   padding: 30px;
 }
 
@@ -230,7 +229,12 @@ footer {
 .ft_right .ft_icon img {
   margin-left: 10px; /* 아이콘 간 간격 */
 }
-
+#city {
+  background-color: #4e4e4e;
+  padding: 5px 10px;
+  border: none;
+  color: #fff;
+}
 /*반응형*/
 @media (max-width: 768px) {
   .menu_left,
@@ -245,7 +249,7 @@ footer {
     border-radius: 5px;
   }
 }
-@media (max-width: 480px) {
+@media (max-width: 390px) {
   header {
     padding: 10px;
   }
@@ -256,14 +260,35 @@ footer {
   }
 
   .main_text .main_title {
-    font-size: 1.2rem;
+    font-size: 15px;
   }
 
   .main_text p {
-    font-size: 0.9rem;
+    font-size: 13px;
   }
 
   footer ul li {
-    font-size: 0.8rem;
+    font-size: 13px;
+  }
+  footer {
+    flex-direction: column; /* 위아래로 정렬 */
+    align-items: center;
+  }
+
+  footer section {
+    flex: none; /* 고정된 높이로 */
+    width: 100%; /* 전체 너비를 차지 */
+    text-align: left;
+  }
+
+  .ft_menu {
+  font-size: 10px;
+  }
+  .ft_right .ft_fam ul li select {
+    width: 100%; /* 선택 박스 너비 조정 */
+  }
+
+  .ft_right .ft_icon img {
+    margin: 0 5px; /* 아이콘 간격 조정 */
   }
 }
