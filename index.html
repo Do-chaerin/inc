@@ -24,9 +24,49 @@
     <!-- 소셜 미디어에서 페이지가 공유될 때 사용되는 설명 -->
     <meta property="og:description" content="신세계I&C" />
     <title>신세계I&C</title>
+ <!-- Link Swiper's CSS -->
+ <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="icon" href="img/favi.png" type="image/png" />
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&family=Noto+Sans+Lao:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
+    <style>
+      html,
+      body {
+        position: relative;
+        height: 100%;
+      }
+  
+      body {
+        background: #ffffff;
+        font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        color: #000;
+        margin: 0;
+        padding: 0;
+      }
+  
+      .swiper {
+        padding: 50px;
+        width: 100%;
+        height: 100%;
+      }
+  
+      .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+  
+      .swiper-slide img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    </style>
   </head>
   <body>
     <div class="container">
@@ -49,15 +89,24 @@
         <section class="menu_glass">
           <ul>
             <li>
-              <a href="#"><img src="img/g_icon.png" width="24px" /></a>
+              <a href="#"><img src="img/g_icon.png" width="20px" height="20px"/></a>
             </li>
           </ul>
         </section>
       </header>
       <main>
-        <section class="main_logo">
-          <img src="img/main.jpg" />
-        </section>
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="img/img_1.jpg"></div>
+            <div class="swiper-slide"><img src="img/img_2.jpg"></div>
+            <div class="swiper-slide"><img src="img/img_3.jpg"></div>
+            <div class="swiper-slide"><img src="img/img_4.jpg"></div>
+            <Span></Span>
+          </div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-pagination"></div>
+        </div>
         <section class="main_text">
           <p class="main_title">About<br />SHINSEGAE I&C</p>
           <p class="txt1">
@@ -173,5 +222,27 @@
         </section>
       </footer>
     </div>
+     <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      spaceBetween: 30,
+      centeredSlides: true,
+      autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
+  </script>
   </body>
 </html>
