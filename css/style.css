@@ -70,7 +70,8 @@ a {
   font-weight: bold;
   font-size: 50px;
   padding-top: 20px;
-  border-top: 10px solid #ff0000
+  padding: 15px;
+  border-top: 10px solid #ff0000;
 }
 
 .main_text p {
@@ -109,7 +110,7 @@ span {
 .bs_title {
   font-weight: bold;
   font-size: 50px;
-  padding: 30px;
+  padding: 15px;
 }
 
 .bs1 li {
@@ -135,13 +136,14 @@ span {
 .news_title {
   font-weight: bold;
   font-size: 50px;
-  padding: 30px;
+  padding: 15px;
 }
-.news ul {
-  padding: 50px;
-}
+
 .news img {
   padding: 0 10px;
+  padding-bottom: 10px;
+  width: 20%;
+  height: 20%;
 }
 .news ul li span {
   color: #000;
@@ -161,7 +163,7 @@ span {
 .contact_title {
   font-weight: bold;
   font-size: 50px;
-  padding: 30px;
+  padding: 15px;
 }
 .contact_bt span {
   font-weight: bold;
@@ -257,14 +259,17 @@ footer {
 }
 /*반응형*/
 @media (max-width: 768px) {
-
-  .hamburger{
-  display: flex;
-  
- }
+  .hamburger {
+    display: flex;
+  }
+  .news_title {
+    padding: 10px;
+  }
   .news ul li {
     flex-direction: column; /* 세로로 쌓이도록 변경 */
     align-items: center; /* 이미지와 텍스트 중앙 정렬 */
+    text-align: center;
+    padding: 15px;
   }
 
   .news ul li img {
@@ -272,6 +277,7 @@ footer {
     height: 100%; /* 작은 화면에서는 이미지 크기 줄이기 */
     margin-right: 0; /* 이미지와 텍스트 간의 간격 제거 */
     margin-bottom: 10px; /* 이미지와 텍스트 사이에 간격 추가 */
+    padding-top: 15px;
   }
 
   .news ul li span {
@@ -303,7 +309,7 @@ footer {
     align-content: space-around;
     text-align: center;
   }
-  nav{
+  nav {
     display: flex;
     align-items: center;
     gap: 10px;
