@@ -12,7 +12,7 @@ header {
   height: 50px;
   border-bottom: 1px solid #e3e2e2;
   align-content: center;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
 }
 
@@ -69,6 +69,8 @@ a {
 .main_title {
   font-weight: bold;
   font-size: 50px;
+  padding-top: 20px;
+  border-top: 10px solid #ff0000
 }
 
 .main_text p {
@@ -235,8 +237,31 @@ footer {
   border: none;
   color: #fff;
 }
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 30px;
+  height: 25px;
+  cursor: pointer;
+}
+
+.hamburger span {
+  display: block;
+  width: 100%;
+  height: 4px;
+  background-color: white;
+  border-radius: 2px;
+  transition: 0.3s;
+}
 /*반응형*/
 @media (max-width: 768px) {
+
+  .hamburger{
+  display: flex;
+  
+ }
   .news ul li {
     flex-direction: column; /* 세로로 쌓이도록 변경 */
     align-items: center; /* 이미지와 텍스트 중앙 정렬 */
@@ -278,7 +303,13 @@ footer {
     align-content: space-around;
     text-align: center;
   }
+  nav{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
 }
+
 /* 미디어 쿼리: 390px 이하 */
 @media (max-width: 390px) {
   .news ul li {
@@ -290,7 +321,7 @@ footer {
     width: 100%; /* 매우 작은 화면에서 이미지 크기 추가 축소 */
     height: 100%; /* 매우 작은 화면에서 이미지 크기 추가 축소 */
     margin-right: 0; /* 이미지와 텍스트 간의 간격 제거 */
-    margin-bottom: 8px; /* 이미지와 텍스트 사이에 간격 추가 */
+    margin-bottom: 10px; /* 이미지와 텍스트 사이에 간격 추가 */
   }
 
   .news ul li span {
@@ -317,7 +348,9 @@ footer {
   .main_text .txt3 {
     font-size: 16px;
   }
-
+  .bs_title {
+    font-size: 24px;
+  }
   .bs1 li:last-child {
     padding-bottom: 30px;
   }
@@ -328,12 +361,16 @@ footer {
     flex-direction: column;
     align-items: center;
   }
-
+  .news_title {
+    font-size: 24px;
+  }
   .news ul li {
     width: auto;
     text-align: center;
   }
-
+  .contact_title {
+    font-size: 20px;
+  }
   .contact_main ul li {
     font-size: 14px;
   }
@@ -383,7 +420,7 @@ footer {
   footer {
     padding: 10px 5px;
   }
-  footer .ft_menu {
+  footer .ft_menu li span {
     font-size: 10px;
   }
 
