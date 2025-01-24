@@ -59,6 +59,9 @@ a {
 .menu_glass {
   display: flex;
 }
+nav {
+  display: flex;
+}
 /*소개글*/
 
 .swiper mySwiper {
@@ -244,8 +247,8 @@ footer {
   display: none;
   flex-direction: column;
   justify-content: space-around;
-  width: 30px;
-  height: 25px;
+  width: 20px;
+  height: 29px;
   cursor: pointer;
 }
 
@@ -262,27 +265,42 @@ footer {
   .hamburger {
     display: flex;
   }
+  .main_title {
+    font-size: 35px;
+  }
+  .txt1 {
+    font-size: 20px;
+  }
+  .bs_title {
+    font-size: 35px;
+  }
+  .bs1 {
+    font-size: 20px;
+  }
+
   .news_title {
-    padding: 10px;
+    font-size: 35px;
   }
   .news ul li {
     flex-direction: column; /* 세로로 쌓이도록 변경 */
     align-items: center; /* 이미지와 텍스트 중앙 정렬 */
     text-align: center;
-    padding: 15px;
   }
 
   .news ul li img {
-    width: 100%; /* 작은 화면에서는 이미지 크기 줄이기 */
-    height: 100%; /* 작은 화면에서는 이미지 크기 줄이기 */
+    width: 50%; /* 작은 화면에서는 이미지 크기 줄이기 */
+    height: 50%; /* 작은 화면에서는 이미지 크기 줄이기 */
     margin-right: 0; /* 이미지와 텍스트 간의 간격 제거 */
     margin-bottom: 10px; /* 이미지와 텍스트 사이에 간격 추가 */
-    padding-top: 15px;
   }
 
   .news ul li span {
-    font-size: 14px; /* 텍스트 크기 줄이기 */
+    font-size: 15px; /* 텍스트 크기 줄이기 */
     max-width: 250px; /* 텍스트 길이 제한 */
+  }
+  .news_bt {
+    font-size: 12px;
+    padding: 10px;
   }
   .menu_left,
   .menu_right {
@@ -291,7 +309,7 @@ footer {
     top: 50px;
     right: 20px;
     background-color: #333;
-    padding: 10px;
+    padding: 0;
     border-radius: 5px;
     justify-content: space-between;
     margin-bottom: 10px;
@@ -301,6 +319,20 @@ footer {
     padding-top: 0;
   }
 
+  .contact_title {
+    font-size: 35px;
+  }
+  .contact_main {
+    font-size: 20px;
+    padding: 20px;
+  }
+  .contact_bt li {
+    font-size: 12px;
+    padding: 10px;
+  }
+  section .ft_left {
+    padding: 10px;
+  }
   header {
     flex-wrap: wrap;
     align-items: center;
@@ -451,7 +483,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 20px;
+  padding: 0 20px;
   background-color: #333;
   color: white;
 }
@@ -516,7 +548,7 @@ body {
   cursor: pointer;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 769px) {
   /* 데스크톱에서는 모바일 메뉴 숨김 */
   .mobile-menu {
     display: none !important;
