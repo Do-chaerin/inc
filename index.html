@@ -248,13 +248,15 @@
       const hamburger = document.getElementById("hamburger");
       const mobileMenu = document.getElementById("mobileMenu");
 
+      // 메뉴 열고 닫기
       hamburger.addEventListener("click", () => {
-        mobileMenu.classList.toggle("active"); // active 클래스 추가/제거
+        mobileMenu.classList.toggle("active");
       });
 
-      // 모바일 메뉴에서 링크 클릭 시 메뉴 닫기
+      // 모바일 메뉴에서 아무 곳이나 클릭하면 닫기
       mobileMenu.addEventListener("click", (event) => {
-        if (event.target.tagName === "A") {
+        // 이벤트가 메뉴 자체 또는 메뉴의 자식 요소에서 발생한 경우만 처리
+        if (event.target === mobileMenu || event.target.tagName === "A") {
           mobileMenu.classList.remove("active");
         }
       });
