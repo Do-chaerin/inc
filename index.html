@@ -85,13 +85,23 @@
             <li><a href="#">CONTACT US</a></li>
           </ul>
         </section>
-        <nav class="navbar">
+        <nav>
           <div class="hamburger" id="hamburger">
-            <img src="img/m_icon.png" />
+            <img src="img/m_icon.png" width="20px" height="20px" />
           </div>
           <section class="menu_glass">
             <img src="img/g_icon.png" width="20px" height="20px" />
           </section>
+        </nav>
+        <!-- 모바일 메뉴 추가 -->
+        <nav class="mobile-menu" id="mobileMenu">
+          <ul>
+            <li><a href="#">COMPANY</a></li>
+            <li><a href="#">BUSINESS</a></li>
+            <li><a href="#">NEWS</a></li>
+            <li><a href="#">CSR</a></li>
+            <li><a href="#">CONTACT US</a></li>
+          </ul>
         </nav>
       </header>
       <main>
@@ -214,7 +224,6 @@
     </div>
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
     <!-- Initialize Swiper -->
     <script>
       var swiper = new Swiper(".mySwiper", {
@@ -232,6 +241,22 @@
           nextEl: ".swiper-button-next",
           prevEl: ".swiper-button-prev",
         },
+      });
+    </script>
+    <script>
+      // 햄버거 메뉴 클릭 이벤트
+      const hamburger = document.getElementById("hamburger");
+      const mobileMenu = document.getElementById("mobileMenu");
+
+      hamburger.addEventListener("click", () => {
+        mobileMenu.classList.toggle("active"); // active 클래스 추가/제거
+      });
+
+      // 모바일 메뉴에서 링크 클릭 시 메뉴 닫기
+      mobileMenu.addEventListener("click", (event) => {
+        if (event.target.tagName === "A") {
+          mobileMenu.classList.remove("active");
+        }
       });
     </script>
   </body>
