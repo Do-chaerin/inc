@@ -63,7 +63,9 @@ nav {
   display: flex;
 }
 /*소개글*/
-
+.swiper-pagination-bullet {
+  background-color: #fa9f9f; /* 원하는 색상으로 변경 */
+}
 .swiper mySwiper {
   align-items: center;
   border-bottom: 10px solid #ff0000;
