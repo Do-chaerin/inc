@@ -144,7 +144,10 @@ span {
   font-size: 50px;
   padding: 15px;
 }
-
+.news li {
+  display: flex;
+  align-items: flex-end;
+}
 .news img {
   padding: 0 10px;
   padding-bottom: 10px;
@@ -153,6 +156,7 @@ span {
 }
 .news ul li span {
   color: #000;
+  font-size: 20px;
 }
 
 .news_bt span {
@@ -182,6 +186,7 @@ span {
 
 .contact_main {
   padding: 50px;
+  font-size: 20px;
 }
 
 /*하단*/
@@ -477,7 +482,6 @@ footer {
   }
 }
 /* 기본 스타일 */
-
 
 .navbar {
   display: flex;
