@@ -64,6 +64,24 @@ nav {
   display: flex;
 }
 
+/**/
+.title {
+  text-align: center;
+  font-size: 35px;
+  padding: 50px;
+  font-weight: bold;
+}
+.part1 {
+  text-align: left;
+  background-color: #e0e0e0;
+  width: 100%;
+  padding: 30px;
+}
+.sub {
+  font-weight: bold;
+  padding-bottom: 10px;
+  font-size: 20px;
+}
 /*하단*/
 
 footer {
@@ -148,7 +166,7 @@ footer {
   .hamburger {
     display: flex;
   }
- 
+
   section .ft_left {
     padding: 10px;
   }
@@ -169,7 +187,6 @@ footer {
 
 /* 미디어 쿼리: 390px 이하 */
 @media (max-width: 390px) {
-  
   .menu_left,
   .menu_right {
     justify-content: center;
@@ -180,7 +197,6 @@ footer {
   .menu_right li {
     margin: 0 10px;
   }
-
 
   footer {
     flex-direction: column;
@@ -193,7 +209,6 @@ footer {
     margin-bottom: 20px;
     font-size: 10px;
   }
- 
 
   .menu_left li,
   .menu_right li {

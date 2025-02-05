@@ -71,7 +71,7 @@
         <section class="title">문의하기</section>
         <section class="part1">
           <ul>
-            <li>디지털혁신의 시작, 지금 신세계아이앤씨와 함께 하세요</li>
+            <li class="sub">디지털혁신의 시작, 지금 신세계아이앤씨와 함께 하세요</li>
 <p>리테일테크 비즈니스부터 IT서비스, 솔루션 총판, IT기기 유통까지 신세계아이앤씨의</p>
 최고 전문가들이 신속하게 해결해드리겠습니다.</p>
 <li>질문 유형을 선택해주세요</li>
@@ -110,6 +110,14 @@
             </li>
           </ul>
         </section>
+      <section class="agree">
+        <input type="checkbox" name="banana" id="banana">
+        <label for="banana">만 14세 이상입니다.</label>
+        <input type="checkbox" name="apple" id="apple">
+        <label for="apple">동의합니다.</label>
+        <input type="checkbox" name="orange" id="orange">
+        <label for="orange">동의합니다.</label>
+      </section>
       </main>
       <footer>
         <section class="ft_left">
@@ -149,27 +157,6 @@
         </section>
       </footer>
     </div>
-    <!-- Swiper JS -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <!-- Initialize Swiper -->
-    <script>
-      var swiper = new Swiper(".mySwiper", {
-        spaceBetween: 30,
-        centeredSlides: true,
-        autoplay: {
-          delay: 2500,
-          disableOnInteraction: false,
-        },
-        pagination: {
-          el: ".swiper-pagination",
-          clickable: true,
-        },
-        navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
-        },
-      });
-    </script>
     <script>
       // 햄버거 메뉴 클릭 이벤트
       const hamburger = document.getElementById("hamburger");
